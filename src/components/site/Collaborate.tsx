@@ -1,5 +1,6 @@
 import { Reveal } from "./Reveal";
 import { ArrowUpRight } from "lucide-react";
+import { MagneticButton } from "./MagneticButton";
 
 const roles = ["Marketers", "Designers", "Developers", "Photographers", "Strategists", "Writers"];
 
@@ -17,13 +18,13 @@ export function Collaborate() {
               We build slowly with a circle of trusted collaborators around the world. If you make
               beautiful, intentional work — let's talk.
             </p>
-            <a
+            <MagneticButton
               href="#contact"
-              className="mt-10 group inline-flex items-center gap-3 border border-[var(--ivory)]/30 px-7 py-4 rounded-full text-sm tracking-wide hover:bg-[var(--ivory)] hover:text-[var(--mocha)] transition-all duration-700 ease-cinema"
+              className="mt-10 group inline-flex items-center gap-3 border border-[var(--ivory)]/30 px-8 py-4 rounded-full text-sm tracking-wide hover:bg-[var(--ivory)] hover:text-[var(--mocha)] transition-colors duration-700 ease-cinema"
             >
-              Join the studio circle
-              <ArrowUpRight className="w-4 h-4 group-hover:rotate-45 transition-transform duration-500" />
-            </a>
+              <span>Join the studio circle</span>
+              <ArrowUpRight className="w-4 h-4 transition-transform duration-500 group-hover:rotate-45" />
+            </MagneticButton>
           </Reveal>
           <div className="md:col-span-5 flex flex-wrap gap-3 md:justify-end content-start">
             {roles.map((r, i) => (
