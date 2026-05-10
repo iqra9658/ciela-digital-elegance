@@ -10,6 +10,8 @@ import { Process } from "@/components/site/Process";
 import { Collaborate } from "@/components/site/Collaborate";
 import { Contact } from "@/components/site/Contact";
 import { Footer } from "@/components/site/Footer";
+import { CursorGlow } from "@/components/site/CursorGlow";
+import { PageLoader } from "@/components/site/PageLoader";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -26,7 +28,9 @@ export const Route = createFileRoute("/")({
 
 function Index() {
   return (
-    <main className="bg-background text-foreground antialiased">
+    <main className="relative bg-background text-foreground antialiased site-grain">
+      <PageLoader />
+      <CursorGlow />
       <Navbar />
       <Hero />
       <Marquee />

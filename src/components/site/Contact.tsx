@@ -1,6 +1,7 @@
 import { Reveal } from "./Reveal";
 import { useState } from "react";
 import { Instagram, MessageCircle, ArrowUpRight } from "lucide-react";
+import { MagneticButton } from "./MagneticButton";
 
 export function Contact() {
   const [sent, setSent] = useState(false);
@@ -74,13 +75,13 @@ export function Contact() {
                 className="w-full bg-transparent border-b border-border py-3 outline-none focus:border-foreground transition-colors text-lg resize-none"
               />
             </div>
-            <button
+            <MagneticButton
               type="submit"
-              className="group inline-flex items-center gap-3 bg-foreground text-background px-7 py-4 rounded-full text-sm tracking-wide hover:bg-[var(--mocha)] transition-all duration-700 ease-cinema"
+              className="group inline-flex items-center gap-3 bg-foreground text-background px-8 py-4 rounded-full text-sm tracking-wide hover:bg-[var(--mocha)] transition-colors duration-700 ease-cinema"
             >
-              {sent ? "Thank you — we'll be in touch" : "Request consultation"}
-              <ArrowUpRight className="w-4 h-4 group-hover:rotate-45 transition-transform duration-500" />
-            </button>
+              <span>{sent ? "Thank you — we'll be in touch" : "Request consultation"}</span>
+              <ArrowUpRight className="w-4 h-4 transition-transform duration-500 group-hover:rotate-45" />
+            </MagneticButton>
           </form>
         </Reveal>
       </div>
